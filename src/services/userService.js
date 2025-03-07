@@ -1,5 +1,7 @@
 // src/services/userService.js
 
+const BASE_URL = `${import.meta.env.VITE_BACK_END_SERVER_URL}/users`;
+
 const index = async () => {
   try {
     // Change the fetch request so that it includes the Authorization header
@@ -19,3 +21,4 @@ const index = async () => {
     throw new Error(err);
   }
 };
+export { index };
