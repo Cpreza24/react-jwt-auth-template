@@ -1,15 +1,17 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import { Routes, Route } from 'react-router';
 import './App.css';
-
 import NavBar from './components/NavBar/NavBar';
+import SignUpForm from './components/SignUpForm/SignUpForm';
 
 const App = () => {
   return (
     <>
       <NavBar />
-      <h1>Hello, friend!</h1>
+      {/* Add the Routes component to wrap our individual routes*/}
+      <Routes>
+        <Route path='/sign-up' element={<SignUpForm />} />
+      </Routes>
     </>
   );
 };
